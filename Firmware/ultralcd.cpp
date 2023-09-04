@@ -3310,6 +3310,11 @@ void lcd_wizard() {
 	}
 }
 
+void set_calibrated() {
+	calibration_status_store(CALIBRATION_STATUS_CALIBRATED);
+	lcd_wizard(0);
+}
+
 void lcd_wizard(int state) {
 
 	bool end = false;
@@ -3564,6 +3569,7 @@ static void lcd_calibration_menu()
     // "Calibrate Z" with storing the reference values to EEPROM.
     MENU_ITEM(submenu, MSG_HOMEYZ, lcd_mesh_calibration_z);
 	MENU_ITEM(submenu, MSG_V2_CALIBRATION, lcd_v2_calibration);
+	MENU_ITEM(function, MSG_SET_CALIBRATED, set_calibrated);
 	
 #ifndef SNMM
 	//MENU_ITEM(function, MSG_CALIBRATE_E, lcd_calibrate_extruder);

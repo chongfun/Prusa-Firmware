@@ -1590,6 +1590,11 @@ const char * const MSG_SETTINGS_LANG_TABLE[LANG_NUM] PROGMEM = {
 	MSG_SETTINGS_CZ
 };
 
+const char MSG_SET_CALIBRATED_EN[] PROGMEM = "Set calibrated";
+const char * const MSG_SET_CALIBRATED_LANG_TABLE[1] PROGMEM = {
+	MSG_SET_CALIBRATED_EN
+};
+
 const char MSG_SET_HOME_OFFSETS_EN[] PROGMEM = "Set home offsets";
 const char * const MSG_SET_HOME_OFFSETS_LANG_TABLE[1] PROGMEM = {
 	MSG_SET_HOME_OFFSETS_EN
